@@ -12,7 +12,7 @@ class DownloadCubit extends Cubit<DownloadState> {
       Permission.storage,
     ].request();
     try {
-      dio.download(url, "/storage/emulated/0/Download/$title.mp3",
+      dio.download(url, "/storage/emulated/0/Download/AudioDer/$title.mp3",
           onReceiveProgress: (count, total) {
         String percent = (count / total * 100).toStringAsFixed(0);
         emit(DownloadingState(percent));

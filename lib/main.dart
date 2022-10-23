@@ -1,6 +1,8 @@
 import 'package:audiodownload/bloc/download/download_cubit.dart';
+import 'package:audiodownload/bloc/download/downloads_cubit.dart';
 import 'package:audiodownload/bloc/movie/movie_cubit.dart';
 import 'package:audiodownload/bloc/movieSong/movie_song_cubit.dart';
+import 'package:audiodownload/bloc/youtube/youtube_cubit.dart';
 import 'package:audiodownload/constants.dart';
 import 'package:audiodownload/repository/language_repo.dart';
 import 'package:audiodownload/repository/movie_repo.dart';
@@ -48,6 +50,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => MovieCubit(MovieRepository())),
         BlocProvider(create: (_) => MovieSongCubit(MovieSongRepository())),
         BlocProvider(create: (_) => DownloadCubit()),
+        BlocProvider(create: (_) => YoutubeCubit()),
+        BlocProvider(create: (_) => Downloads()),
       ],
       child: MaterialApp(
         navigatorKey: navi,

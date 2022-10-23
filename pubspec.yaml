@@ -38,6 +38,8 @@ dependencies:
   fluttertoast: ^8.0.9
   awesome_notifications: ^0.7.2
   open_file: ^3.2.1
+  assets_audio_player: ^3.0.5
+  youtube_explode_dart: ^1.12.1
 
 dev_dependencies:
   flutter_test:
